@@ -1,0 +1,410 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+header {
+    background-color: #ff9800;
+    /* Cor do fundo do header */
+    padding: 30px;
+    /* Aumenta o padding para maior altura */
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #fff;
+    height: 17vh;
+    align-content: center;
+    flex-direction: row;
+    text-align: center
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.menu-section h2 {
+    margin-bottom: 10px;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    flex: 0 0 48%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item img {
+    max-width: 100px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.menu-item div {
+    flex: 1;
+    text-align: left;
+    padding-left: 15px;
+}
+
+span {
+    font-weight: bold;
+    color: #ff9800;
+}
+
+nav {
+    background-color: #e97e1a;
+    /* Cor de fundo da nav */
+    padding: 10px;
+    border-radius: 15px;
+    /* Aqui você define o arredondamento */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    /* Arredondamento nos links */
+}
+
+nav a:hover {
+    background-color: #e90707;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+/* Estilo do botão do carrinho */
+.cart-button {
+    background-color: #D13B10;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    /* Espaçamento entre os botões */
+    text-decoration: none;
+    position: relative;
+    /* Necessário para a animação */
+}
+
+/* Animação de tremer */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.cart-button.shake {
+    animation: shake 0.6s ease infinite;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.cart-button,
+.location-button {
+    position: relative;
+    background-color: #D13B10;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    /* Espaçamento entre os botões */
+    text-decoration: none;
+}
+
+.cart-button {
+    background-color: #D13B10;
+}
+
+.location-button {
+    background-color: #DB7300;
+}
+
+.cart-button:hover,
+.location-button:hover {
+    opacity: 0.8;
+}
+
+.remove-item {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.remove-item:hover {
+    background-color: #e60000;
+}
+
+
+.product-link {
+    text-decoration: none;
+    font-size: x-large;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 7px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .menu-item {
+        flex: 0 0 100%;
+        margin: 10px 0;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+.finalize-container {
+    margin-top: 20px;
+}
+
+.finalize-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+.finalize-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#finalize-order {
+    background-color: #D13B10;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#finalize-order:hover {
+    opacity: 0.8;
+}
+
+h2 {
+    font-size: xx-large;
+    text-align: center;
+}
+
+/* Estilos básicos */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos da Light Bar */
+#light-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+#light-bar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#light-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    #light-bar {
+        display: block;
+    }
+}
+
+/* Estilos das Seções */
+section {
+    padding: 20px 5px;
+    border-bottom: 1px solid #ccc;
+}
