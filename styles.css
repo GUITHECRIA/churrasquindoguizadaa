@@ -606,3 +606,17 @@ footer .contact-info {
 footer .contact-info p {
     margin: 5px 0;
 }
+.bungee-tint-regular,h2 {
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 900%;
+    font-style: normal;
+    color: red;
+  }
+
+.chivo-uniquifier,h3 {
+  font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+  
