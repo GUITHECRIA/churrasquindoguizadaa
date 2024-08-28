@@ -89,6 +89,13 @@ main {
     flex: 0 0 48%;
     display: flex;
     align-items: center;
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave */
+}
+
+.menu-item:hover,
+.menu-item:active {
+    transform: scale(1.1);
 }
 
 .menu-item img {
@@ -481,7 +488,7 @@ section {
         justify-content: space-between;
         padding: 0 10px;
         box-sizing: border-box;
-        z-index: 1000;
+
         background-color: #f4f4f4;
         /* Pode ajustar a cor de fundo se necessário */
     }
@@ -516,7 +523,6 @@ section {
     justify-content: space-between;
     padding: 0 10px;
     box-sizing: border-box;
-    z-index: 1000;
     background-color: #f4f4f4;
     /* Pode ajustar a cor de fundo se necessário */
 }
