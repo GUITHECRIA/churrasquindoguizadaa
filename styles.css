@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 html {
@@ -99,7 +100,7 @@ main {
 .menu-item div {
     flex: 1;
     text-align: left;
-    padding-left: 15px;
+
 }
 
 span {
@@ -405,11 +406,143 @@ header {
 @media (max-width: 768px) {
     #light-bar {
         display: block;
+
     }
+
 }
 
 /* Estilos das Seções */
 section {
     padding: 20px 5px;
     border-bottom: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    #light-bar {
+        display: block;
+        position: relative;
+        top: 0;
+        background: #D13B10;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+    /* Container para separar os botões */
+    .buttons-container {
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0 20px;
+        /* Espaçamento interno para os botões */
+        box-sizing: border-box;
+
+    }
+
+    /* Estilo para o botão de Localização */
+    .location-button {
+        background-color: #DB7300;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        flex-grow: 1;
+        margin-right: 10px;
+        /* Espaço entre os botões */
+    }
+
+    /* Estilo para o botão do Carrinho */
+    .cart-button {
+        background-color: #D13B10;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        flex-grow: 1;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    /* Container para os ícones */
+    .icon-bar {
+        margin-bottom: auto;
+        margin-top: 5px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        box-sizing: border-box;
+        z-index: 1000;
+        background-color: #f4f4f4;
+        /* Pode ajustar a cor de fundo se necessário */
+    }
+
+    /* Estilo para o ícone de WhatsApp */
+    .icon-whatsapp {
+        display: inline-block;
+    }
+
+    .icon-whatsapp img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Estilo para o ícone de Compartilhar */
+    .icon-share {
+        display: inline-block;
+    }
+
+    .icon-share img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.icon-bar {
+    margin-bottom: auto;
+    margin-top: 5px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 1000;
+    background-color: #f4f4f4;
+    /* Pode ajustar a cor de fundo se necessário */
+}
+
+/* Estilo para o ícone de WhatsApp */
+.icon-whatsapp {
+    display: inline-block;
+}
+
+.icon-whatsapp img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Estilo para o ícone de Compartilhar */
+.icon-share {
+    display: inline-block;
+}
+
+.icon-share img {
+    width: 20px;
+    height: 20px;
+}
+
+#location-button,
+#cart-button {
+    display: block;
+    /* Definido como 'block' para que os botões sejam exibidos por padrão */
 }
