@@ -102,3 +102,54 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+document.getElementById('share-button').addEventListener('click', function (event) {
+    event.preventDefault(); // Previne o comportamento padrão do link
+
+    if (navigator.share) {
+        navigator.share({
+            title: 'Churrasquinho do Guizadaaa',
+            text: 'Veja o cardápio e faça seu pedido!',
+            url: window.location.href // Compartilha a URL atual
+        }).then(() => {
+            console.log('Compartilhamento bem-sucedido!');
+        }).catch((error) => {
+            console.error('Erro ao compartilhar:', error);
+        });
+    } else {
+        alert('Compartilhamento não suportado neste navegador.');
+    }
+});
+
+// Função para abrir o modal e esconder os botões
+function openModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+
+    // Esconder botões de Localização e Carrinho
+    document.getElementById("location-button").style.display = "none";
+    document.getElementById("cart-button").style.display = "none";
+}
+
+// Função para fechar o modal e mostrar os botões novamente
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+
+    // Mostrar botões de Localização e Carrinho
+    document.getElementById("location-button").style.display = "block";
+    document.getElementById("cart-button").style.display = "block";
+}
+
+// Fechar o modal ao clicar no botão de fechar
+var closeBtn = document.getElementsByClassName("close")[0];
+closeBtn.onclick = function () {
+    closeModal();
+}
+
+// Fechar o modal ao clicar fora dele
+window.onclick = function (event) {
+    var modal = document.getElementById("myModal");
+    if (event.target == modal) {
+        closeModal();
+    }
+}
