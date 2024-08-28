@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -23,10 +22,10 @@ body {
 }
 
 header {
-    background-color: #ff9800;
-    /* Cor do fundo do header */
-    padding: 30px;
-    /* Aumenta o padding para maior altura */
+    background-color: #333;
+
+    padding: 20px;
+
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -35,7 +34,11 @@ header {
     height: auto;
     align-content: center;
     flex-direction: row;
-    text-align: center
+    text-align: center;
+    position: relative;
+    width: 100%;
+    border-top: 20px;
+    bottom: 0;
 }
 
 .logo {
@@ -90,7 +93,7 @@ main {
     display: flex;
     align-items: center;
     transition: transform 0.3s ease;
-    /* Adiciona uma transição suave */
+
 }
 
 .menu-item:hover,
@@ -117,10 +120,10 @@ span {
 
 nav {
     background-color: #e97e1a;
-    /* Cor de fundo da nav */
+
     padding: 10px;
     border-radius: 15px;
-    /* Aqui você define o arredondamento */
+
 }
 
 nav a {
@@ -129,7 +132,7 @@ nav a {
     padding: 10px 20px;
     display: inline-block;
     border-radius: 5px;
-    /* Arredondamento nos links */
+
 }
 
 nav a:hover {
@@ -165,7 +168,7 @@ nav ul li a {
     background-color: #45a049;
 }
 
-/* Estilo do botão do carrinho */
+
 .cart-button {
     background-color: #D13B10;
     color: white;
@@ -175,13 +178,13 @@ nav ul li a {
     font-size: 16px;
     cursor: pointer;
     margin-left: 10px;
-    /* Espaçamento entre os botões */
+
     text-decoration: none;
     position: relative;
-    /* Necessário para a animação */
+
 }
 
-/* Animação de tremer */
+
 @keyframes shake {
     0% {
         transform: translateX(0);
@@ -259,7 +262,7 @@ nav ul li a {
     font-size: 16px;
     cursor: pointer;
     margin-left: 10px;
-    /* Espaçamento entre os botões */
+
     text-decoration: none;
 }
 
@@ -370,7 +373,6 @@ h2 {
     text-align: center;
 }
 
-/* Estilos básicos */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -383,7 +385,7 @@ header {
     text-align: center;
 }
 
-/* Estilos da Light Bar */
+
 #light-bar {
     display: none;
     position: fixed;
@@ -409,7 +411,7 @@ header {
     text-decoration: underline;
 }
 
-/* Estilos para dispositivos móveis */
+
 @media (max-width: 768px) {
     #light-bar {
         display: block;
@@ -418,7 +420,6 @@ header {
 
 }
 
-/* Estilos das Seções */
 section {
     padding: 20px 5px;
     border-bottom: 1px solid #ccc;
@@ -437,7 +438,7 @@ section {
         text-decoration: none;
     }
 
-    /* Container para separar os botões */
+
     .buttons-container {
         position: fixed;
         bottom: 10px;
@@ -446,12 +447,11 @@ section {
         display: flex;
         justify-content: space-around;
         padding: 0 20px;
-        /* Espaçamento interno para os botões */
+
         box-sizing: border-box;
 
     }
 
-    /* Estilo para o botão de Localização */
     .location-button {
         background-color: #DB7300;
         padding: 10px;
@@ -460,10 +460,10 @@ section {
         cursor: pointer;
         flex-grow: 1;
         margin-right: 10px;
-        /* Espaço entre os botões */
+
     }
 
-    /* Estilo para o botão do Carrinho */
+
     .cart-button {
         background-color: #D13B10;
         padding: 10px;
@@ -478,7 +478,6 @@ section {
 
 @media (max-width: 768px) {
 
-    /* Container para os ícones */
     .icon-bar {
         margin-bottom: auto;
         margin-top: 5px;
@@ -490,10 +489,9 @@ section {
         box-sizing: border-box;
 
         background-color: #f4f4f4;
-        /* Pode ajustar a cor de fundo se necessário */
     }
 
-    /* Estilo para o ícone de WhatsApp */
+
     .icon-whatsapp {
         display: inline-block;
     }
@@ -503,7 +501,7 @@ section {
         height: 20px;
     }
 
-    /* Estilo para o ícone de Compartilhar */
+
     .icon-share {
         display: inline-block;
     }
@@ -524,10 +522,10 @@ section {
     padding: 0 10px;
     box-sizing: border-box;
     background-color: #f4f4f4;
-    /* Pode ajustar a cor de fundo se necessário */
+
 }
 
-/* Estilo para o ícone de WhatsApp */
+
 .icon-whatsapp {
     display: inline-block;
 }
@@ -537,7 +535,7 @@ section {
     height: 20px;
 }
 
-/* Estilo para o ícone de Compartilhar */
+
 .icon-share {
     display: inline-block;
 }
@@ -550,5 +548,61 @@ section {
 #location-button,
 #cart-button {
     display: block;
-    /* Definido como 'block' para que os botões sejam exibidos por padrão */
+
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #ff9800;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+footer a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    vertical-align: middle;
+    transition: opacity 0.3s ease;
+}
+
+footer .social-icons img:hover {
+    opacity: 0.8;
+}
+
+footer .contact-info {
+    margin-top: 20px;
+}
+
+footer .contact-info p {
+    margin: 5px 0;
 }
