@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const finalizeOrderButton = document.getElementById("finalize-order");
     const addressInput = document.getElementById("address");
     const tableNumberInput = document.getElementById("table-number");
+    const paymentForm = document.getElementById("payment-form");
 
     let subtotal = 0;
     let cartItemsList = [];
@@ -70,6 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
     finalizeOrderButton.addEventListener("click", () => {
         const address = addressInput.value.trim();
         const tableNumber = tableNumberInput.value.trim();
+        const paymentMethod = paymentForm.querySelector('input[name="payment"]:checked').value;
+
         let orderMessage = `Pedido:\n`;
 
         cartItemsList.forEach(item => {
@@ -77,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         orderMessage += `\nSubtotal: R$ ${subtotal.toFixed(2).replace('.', ',')}\n`;
+        orderMessage += `Forma de Pagamento: ${paymentMethod}\n`;
 
         if (tableNumber) {
             orderMessage += `Número da Mesa: ${tableNumber}\n`;
@@ -102,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
 document.getElementById('share-button').addEventListener('click', function (event) {
     event.preventDefault(); // Previne o comportamento padrão do link
 
