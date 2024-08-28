@@ -38,12 +38,13 @@ header {
 }
 
 .logo {
-   flex: auto;
+    flex: auto;
     font-size: 24px;
     font-weight: bold;
     align-items: center;
     text-align: center;
     align-content: center;
+
 }
 
 .menu {
